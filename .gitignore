@@ -1,0 +1,5 @@
+**/__pycache__
+**/migrations
+**/settings_vars.py
+*.log
+db.sqlite3
