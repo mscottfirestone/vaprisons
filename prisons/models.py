@@ -17,11 +17,14 @@ class Prison(models.Model):
     def __str__(self):
         return self.name
 
+    def getArticles(self):
+        return self.newsarticle_set.all() #pylint: disable=no-member
+
 # News articles with tags(foreign keys) for specific prisons
 class NewsArticle(models.Model):
     headline = models.CharField(max_length=255)
     article_url = models.URLField()
-    img_url = models.URLField(null=true)
+    img_url = models.URLField(null=True)
     prisons = models.ManyToManyField(Prison)
     pub_date = models.DateTimeField()
 

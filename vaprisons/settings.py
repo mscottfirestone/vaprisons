@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'prisons.apps.PrisonsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -76,20 +77,12 @@ WSGI_APPLICATION = 'vaprisons.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-<<<<<<< HEAD
+        'ENGINE': settings_vars.db_vars['engine'],
         'NAME': settings_vars.db_vars['name'],
         'USER': settings_vars.db_vars['user'],
         'PASSWORD': settings_vars.db_vars['password'],
         'HOST': settings_vars.db_vars['host'],
         'PORT': settings_vars.db_vars['port'],
-=======
-        'NAME': settings_vars.pg_vars['db'],
-        'USER': settings_vars.pg_vars['user'],
-        'PASSWORD': settings_vars.pg_vars['password'],
-        'HOST': settings_vars.pg_vars['host'],
-        'PORT': '5432',
->>>>>>> master
     }
 }
 
