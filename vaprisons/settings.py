@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'vaprisons.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': settings_vars.pg_vars['db'],
+        'USER': settings_vars.pg_vars['user'],
+        'PASSWORD': settings_vars.pg_vars['password'],
+        'HOST': settings_vars.pg_vars['host'],
+        'PORT': '5432',
     }
 }
 
