@@ -1,6 +1,6 @@
 from django.db import models
 
-# Info for populating individual prison templates
+# Info for populating individual prison template
 class Prison(models.Model):
     name = models.CharField(max_length=50)
     agency = models.CharField(max_length=25)
