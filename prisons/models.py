@@ -20,7 +20,7 @@ class Prison(models.Model):
     def getArticles(self):
         return self.newsarticle_set.all() #pylint: disable=no-member
 
-# News articles with tags(foreign keys) for specific prisons
+# News articles with a many-to-many field for specific prisons
 class NewsArticle(models.Model):
     headline = models.CharField(max_length=255)
     article_url = models.URLField()

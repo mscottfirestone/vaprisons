@@ -1,0 +1,126 @@
+:root{
+    --blu: #004DE2;
+    --grey: #212121;
+}
+
+html{
+    font-size: 70%;
+}
+
+html, body{
+    min-width: 300px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kanit', sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 34rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo{
+    height: 5.2rem;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--blu);
+}
+
+.menu{
+    width: 100%;
+    padding: 0.3rem 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 400;
+    font-size: 1.45rem;
+    background-color: var(--blu);
+}
+
+.menu_button > a{
+    color: white;
+    text-decoration: none;
+}
+
+.menu > hr{
+    display: block;
+    width: 100%;
+    height: 2px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: white;
+}
+
+footer{
+    width: 100%;
+    height: 5.2rem;
+    background-color: var(--grey);
+}
+
+@media (min-width: 655px){
+    header{
+        height: 10.4rem;
+    }
+
+    .menu{
+        height: 5.2rem;
+        padding: 0;
+        flex-direction: row;
+        background-color: white;
+    }
+
+    .menu_button > a{
+        color: var(--grey);
+    }
+
+    .menu_button > a:hover{
+        color: #777777;
+    }
+
+    .menu > hr{
+        display: none;
+    }
+}
+
+@media (min-width: 960px){
+    header{
+        height: 5.2rem;
+        flex-direction: row;
+    }
+
+    .logo{
+        padding: 0 1rem;
+    }
+
+    .menu{
+        width: auto;
+        padding: 0 1rem 0 2rem;
+    }
+}
+
+@media (min-width: 1160px){
+    .menu{
+        padding: 0 5rem 0 10rem;
+    }
+}
+
+@media (min-width: 1810px){
+    html{
+        font-size: 100%;
+    }
+}
+
+@media (min-width: 2300px){
+    html{
+        font-size: 125%;
+    }
+}

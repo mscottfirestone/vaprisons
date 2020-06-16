@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}Virginia Prisons{% endblock %}</title>
+
+        {% load static %}
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+        
+        {% block resources %}
+        
+        {% endblock %}
+        <script data-ad-client="ca-pub-4341516960235603" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="logo"><h1>Virginia Prisons</h1></div>
+            <div class="menu">
+                <div class="menu_button"><a href="#">Home</a></div><hr>
+                <div class="menu_button"><a href="#">Offender Search</a></div><hr>
+                <div class="menu_button"><a href="#">Prison Search</a></div><hr>
+                <div class="menu_button"><a href="#">Visitation</a></div><hr>
+                <div class="menu_button"><a href="#">Send Money</a></div><hr>
+                <div class="menu_button"><a href="#">Send Mail</a></div><hr>
+                <div class="menu_button"><a href="#">News</a></div>
+            </div>
+        </header>
+        {% block content %}
+
+        {% endblock %}
+        <footer></footer>
+    </body>
+</html>

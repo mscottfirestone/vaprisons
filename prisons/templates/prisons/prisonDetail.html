@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}{{ prison.name }}{% endblock %}
+
+{% block resources %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'prisons/css/prisonDetail.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="content">
+        prison: {{ prison }}
+        address: {{ prison.address }}
+    </div>
+{% endblock %}
